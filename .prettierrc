@@ -1,0 +1,9 @@
+{
+    "semi": true,
+    "trailingComma": "none",
+    "printWidth": 80,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+
+  }
