@@ -1,0 +1,44 @@
+<template>
+  <nav>
+    <div class="logo">
+      <!-- Plaats hier je logo -->
+      <img alt="logo" src="../assets/touchwonderslogo.jpg" />
+    </div>
+    <ul class="nav-links">
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/login">Login</router-link></li>
+      <!-- Voeg hier meer navigatielinks toe indien nodig -->
+    </ul>
+  </nav>
+</template>
+
+<script>
+export default {
+  name: "NavBar"
+};
+</script>
+
+<style scoped>
+/* Stijl hier je navigatiebalk */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #d45e70;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 1rem;
+}
+
+.logo img {
+  height: 50px; /* Pas dit aan op basis van de grootte van je logo */
+}
+</style>

@@ -1,8 +1,7 @@
 <template>
   <div class="home">
-    <img alt="logo" src="../assets/touchwonderslogo.jpg" />
     <h1>{{ msg }}</h1>
-    <!-- <BarChart></BarChart> -->
+    <BarChart></BarChart>
   </div>
 </template>
 <script>
