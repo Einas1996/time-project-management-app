@@ -1,24 +1,20 @@
 <template>
   <div class="home">
-    <h1>{{ msg }}</h1>
     <ProjectDropdown></ProjectDropdown>
+    <LayoutComponent></LayoutComponent>
     <!-- <BarChart></BarChart> -->
   </div>
 </template>
 <script>
+import LayoutComponent from "@/components/LayoutComponent.vue";
 import ProjectDropdown from "@/components/ProjectDropdown.vue";
 // import BarChart from "@/components/BarChart.vue";
 
 export default {
   name: "HomeView",
-  props: {
-    msg: {
-      type: String,
-      default: "Welcome to the project time management app."
-    }
-  },
   components: {
-    ProjectDropdown
+    ProjectDropdown,
+    LayoutComponent
     // BarChart
   }
 };

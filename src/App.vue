@@ -1,3 +1,6 @@
+@import "tailwindcss/base"; @import "tailwindcss/components"; @import
+"tailwindcss/utilities";
+
 <template>
   <div id="app">
     <NavBar></NavBar>
