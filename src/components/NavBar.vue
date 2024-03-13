@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="logo">
-      <img alt="logo" src="../assets/touchwonderslogo.jpg" />
+      <img alt="logo" src="../assets/touchwonders_logo.jpeg" />
     </div>
     <ul class="nav-links">
       <li><router-link to="/">Home</router-link></li>
@@ -22,7 +22,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #d45e70;
+  background-color: #fff;
   color: #fff;
 }
 
