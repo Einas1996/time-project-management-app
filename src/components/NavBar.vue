@@ -1,13 +1,11 @@
 <template>
   <nav>
     <div class="logo">
-      <!-- Plaats hier je logo -->
       <img alt="logo" src="../assets/touchwonderslogo.jpg" />
     </div>
     <ul class="nav-links">
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/login">Login</router-link></li>
-      <!-- Voeg hier meer navigatielinks toe indien nodig -->
     </ul>
   </nav>
 </template>
@@ -19,7 +17,6 @@ export default {
 </script>
 
 <style scoped>
-/* Stijl hier je navigatiebalk */
 nav {
   display: flex;
   justify-content: space-between;
@@ -39,6 +36,6 @@ nav {
 }
 
 .logo img {
-  height: 50px; /* Pas dit aan op basis van de grootte van je logo */
+  height: 50px;
 }
 </style>
