@@ -1,15 +1,15 @@
 <template>
   <div class="home">
-    <LayoutComponent></LayoutComponent>
+    <DashboardTile></DashboardTile>
   </div>
 </template>
 <script>
-import LayoutComponent from "@/components/LayoutComponent.vue";
+import DashboardTile from "@/components/DashboardTile.vue";
 
 export default {
   name: "HomeView",
   components: {
-    LayoutComponent
+    DashboardTile
   }
 };
 </script>
