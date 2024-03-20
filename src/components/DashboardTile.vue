@@ -4,9 +4,13 @@
     <div class="project-grid">
       <div v-for="project in projects" :key="project.id" class="project-card">
         <h2>{{ project.name }}</h2>
-        <p>Budgeted hours: {{ project.budgetedhours }}</p>
-        <p>Spent hours: {{ project.Spenthours }}</p>
-        <p>Difference: {{ calculateDifference(project) }}</p>
+        <p class="budgeted-color">
+          Budgeted hours: <input v-model="project.budgetedhours" />
+        </p>
+        <p class="spent-color">Spent hours: {{ project.Spenthours }}</p>
+        <p class="difference-color">
+          Difference: {{ calculateDifference(project) }}
+        </p>
       </div>
     </div>
   </div>
@@ -26,31 +30,31 @@ export default {
         {
           id: 1,
           name: "Project A",
-          budgetedhours: 120,
+          budgetedhours: "",
           Spenthours: 115
         },
         {
           id: 2,
           name: "Project B",
-          budgetedhours: 120,
+          budgetedhours: "",
           Spenthours: 110
         },
         {
           id: 3,
           name: "Project C",
-          budgetedhours: 120,
+          budgetedhours: "",
           Spenthours: 90
         },
         {
           id: 4,
           name: "Project D",
-          budgetedhours: 120,
+          budgetedhours: "",
           Spenthours: 100
         },
         {
           id: 5,
           name: "Project E",
-          budgetedhours: 150,
+          budgetedhours: "",
           Spenthours: 115
         }
       ]
@@ -64,6 +68,15 @@ export default {
 };
 </script>
 <style scoped>
+.budgeted-color {
+  color: red;
+}
+.spent-color {
+  color: green;
+}
+.difference-color {
+  color: blue;
+}
 .project-container {
   padding: 20px;
 }
