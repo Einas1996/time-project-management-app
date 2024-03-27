@@ -23,8 +23,6 @@ nav {
   align-items: center;
   padding: 1rem;
   background-color: #ecd9d9;
-  color: #fff;
-  border: black;
 }
 
 .nav-links {

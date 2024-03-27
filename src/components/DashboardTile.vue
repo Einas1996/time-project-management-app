@@ -3,21 +3,18 @@
     <h2>Projects budget overview</h2>
     <div class="project-grid">
       <div v-for="project in projects" :key="project.id" class="project-card">
-        <h2>{{ project.name }}</h2>
-        <p class="budgeted-color">
-          Budgeted hours: <input v-model="project.budgetedhours" />
-        </p>
-        <p class="spent-color">Spent hours: {{ project.Spenthours }}</p>
-        <p class="difference-color">
-          Difference: {{ calculateDifference(project) }}
-        </p>
+        <ProjectTile :project="project"></ProjectTile>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ProjectTile from "@/components/ProjectTile.vue";
 export default {
+  components: {
+    ProjectTile
+  },
   props: {
     data: {
       type: Array,
@@ -30,53 +27,39 @@ export default {
         {
           id: 1,
           name: "Project A",
-          budgetedhours: "",
-          Spenthours: 115
+          budgetedHours: 200,
+          spentHours: 115
         },
         {
           id: 2,
           name: "Project B",
-          budgetedhours: "",
-          Spenthours: 110
+          budgetedHours: 150,
+          spentHours: 110
         },
         {
           id: 3,
           name: "Project C",
-          budgetedhours: "",
-          Spenthours: 90
+          budgetedHours: "100",
+          spentHours: 90
         },
         {
           id: 4,
           name: "Project D",
-          budgetedhours: "",
-          Spenthours: 100
+          budgetedHours: 100,
+          spentHours: 120
         },
         {
           id: 5,
           name: "Project E",
-          budgetedhours: "",
-          Spenthours: 115
+          budgetedHours: "120",
+          spentHours: 115
         }
       ]
     };
-  },
-  methods: {
-    calculateDifference(project) {
-      return project.budgetedhours - project.Spenthours;
-    }
   }
 };
 </script>
 <style scoped>
-.budgeted-color {
-  color: red;
-}
-.spent-color {
-  color: green;
-}
-.difference-color {
-  color: blue;
-}
 .project-container {
   padding: 20px;
 }
@@ -85,11 +68,5 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-}
-
-.project-card {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 5px;
 }
 </style>
