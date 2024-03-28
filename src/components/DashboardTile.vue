@@ -62,8 +62,14 @@ export default {
 <style scoped>
 .project-container {
   padding: 20px;
+  font-family: Arial;
 }
 
+h2 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 35px;
+}
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

@@ -32,7 +32,7 @@ export default {
       return (this.spentHours / this.budgetedHours) * 100;
     },
     progressBarColor() {
-      return this.spentHours > this.budgetedHours ? "red" : "black";
+      return this.spentHours > this.budgetedHours ? "red" : "green";
     },
     extraHours() {
       return Math.max(0, this.spentHours - this.budgetedHours);
@@ -51,17 +51,35 @@ export default {
   height: 15px;
   background-color: #f0f0f0;
   border-radius: 4px;
-  border: 1px solid #111010;
+  border-bottom: 1px solid #ddd;
   overflow: hidden;
+  position: relative;
+  box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
 }
 
 .progress-fill {
   height: 100%;
   transition: width 0.3s ease;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 2rem 2rem;
+  animation: progress-animation 2s linear infinite;
 }
 
-.extra-hours {
-  font-size: 14px;
-  color: red;
+@keyframes progress-animation {
+  from {
+    background-position: 1rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
 }
 </style>
